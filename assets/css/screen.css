@@ -117,6 +117,7 @@ img {
 .js figure {
   cursor: pointer;
 }
+
 figcaption{
   transition: opacity 1s;
 }
