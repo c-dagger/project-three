@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("#//basehold.it/26");
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html.stylelint{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* Begin site styles below */
+/*
+  Setting type according to a 3:4 (Major Third) Modular Scale:
+  https://www.modularscale.com/?18&px&1.33
+*/
+/* Base Styles */
+
+/*
+font-size:  18px
+line-height  26px;
+*/
+
+html {
+  font-family: Piazzolla, "Hoefler Text", Georgia, "Times New Roman", Times, Roman, serif;
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.44em; /* 26px / 18px (144%) = 1.44em */
+  padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  background: #F3A095;
+  color: #121212;
+}
+
+h1 {
+  border: 0.333333em solid #F9CFCB; /* 6px / 18px = 0.333333em */
+  font-weight: bold; /* Piazzolla Light */
+  font-size: 1.333em; /* Two steps up modular scale: 32px / 18px = 1.777778em */
+  line-height: 1.625em; /* 52px (twice the baseline) / 32px (modular scale) = 1.625em */
+  padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+}
+
+h2 {
+  padding-bottom: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  font-size: 1.333em; /* One step up modular scale: 23.994px / 18 px = 1.333em */
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+figure {
+  padding-bottom: 2.5em; /* 45px / 18px = 2.5em */
+}
+
+figcaption {
+  position: absolute;
+  font-size: 0.8em; /* Two steps down the modular scale: 10.125px / 18px = 0.5625em */
+}
+
+p {
+  padding-bottom: 0.8888889em; /* 16px / 18px = 0.8888889em */
+}
+
+p + p {
+  text-indent: 1.44em; /* 26px / 18px = 1.44em */
+  padding-bottom: 1.44em; /* 26px / 18px = 1.44em */
+}
+
+ul {
+  margin-left: 0.694444em; /* 12.5px / 18px = 0.694444em */
+  padding-bottom: 0.694444em; /* 12.5px / 18px = 0.694444em */
+  list-style-type: disc;
+}
+
+li {
+  padding-bottom: 0.694444em; /* 12.5px / 18px = 0.694444em */
+}
+
+/* Modular Styles */
+nav li {
+  padding-bottom: 0.3333333em; /* 6px / 18px = 0.3333333em */
+  list-style-type: none;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #f5b5ae;
+  color: #222;
+  font-weight: bold;
+
+}
+nav a:hover {
+  background: #F5B2AB;
+}
+
+/* Responsive Images */
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+@supports (display: flex) {
+  nav li {
+    width: auto;
+  }
+}
+/* State Styles */
+@media screen and (min-width: 100px) {
+  html {
+    font-size: 1em;
+    line-height: 1.222222em; /* 22px / 18px = 1.222222em */
+    padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  }
+
+  h1, h2, h3, h4 {
+    padding-bottom: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  }
+
+  footer {
+    padding-top: 1.388889em; /* 25px / 18px = 1.388889em */
+  }
+}
+@media screen and (min-width: 490px) {
+  html {
+    padding: 1.388889em 10% 1.388889em 10%; /*TRBL - 25px / 18px = 1.388889em */
+  }
+
+  h1 {
+    border: 6px solid #F9CFCB;
+    font-size: 1.77778em;
+  }
+
+  nav a {
+    margin-right: 0.444444em; /* 8px / 18px = 0.444444em */
+  }
+
+  nav li {
+    float: left; /* Handle layout with float */
+    width: 33.3333333%; /* NOT for flexbox */
+    text-align: center;
+    flex-grow: 1 1 auto; /* Handle layout with flexbox */
+  }
+
+  figure::after,
+  section::after {
+    content: "";
+    display: block;
+    clear: both;
+    float: none;
+  }
+  .portrait {
+    display: block;
+    float: center;
+    width: 30%;
+    padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  }
+  .landscape {
+    display: block;
+    float: center;
+    width: 30%;
+    padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  }
+
+  figure {
+    clear: both;
+    float: right;
+    margin-bottom: 1.777778em; /* 32px / 18px = 1.777778em */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 1.25em; /* 20px / 16px = 1.25em */
+    line-height: 2.222222em; /* 40px / 18px = 2.222222em */
+  }
+  #gallery {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 1.25em; /* 20px / 16px = 1.25em */
+    line-height: 2.5em; /* 45px / 18px = 2.5em */
+  }
+  .portrait {
+    display: block;
+    float: center;
+    width: 23%;
+    padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  }
+  .landscape {
+    display: block;
+    float: center;
+    width: 23%;
+    padding: 0.6666667em; /* 12px / 18px = 0.6666667em */
+  }
+}
