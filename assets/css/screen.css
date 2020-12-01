@@ -114,6 +114,18 @@ img {
   }
 }
 /* State Styles */
+figcaption{
+  transition: opacity 1s;
+}
+
+figcaption.active {
+  opacity: 1.0;
+  color: purple;
+}
+figcaption.inactive {
+  opacity: 0;
+}
+
 @media screen and (min-width: 100px) {
   html {
     font-size: 1em;
