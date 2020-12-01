@@ -1,4 +1,4 @@
-(function(){
+(function() {
 if (!('querySelector' in document)) {
   return; //exits the function if browser does not understand querySelector
 }
